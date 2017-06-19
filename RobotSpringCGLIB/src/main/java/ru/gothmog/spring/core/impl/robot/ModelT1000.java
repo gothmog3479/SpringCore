@@ -2,6 +2,8 @@ package ru.gothmog.spring.core.impl.robot;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import ru.gothmog.spring.core.interfaces.Hand;
 import ru.gothmog.spring.core.interfaces.Head;
 import ru.gothmog.spring.core.interfaces.Leg;
@@ -9,6 +11,7 @@ import ru.gothmog.spring.core.interfaces.Leg;
 /**
  * @author d.grushetskiy
  */
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class ModelT1000 extends BaseModel implements InitializingBean, DisposableBean {
 
     private String color;
